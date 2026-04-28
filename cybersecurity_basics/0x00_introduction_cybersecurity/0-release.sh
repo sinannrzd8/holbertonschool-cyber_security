@@ -1,1 +1,1 @@
-Kali
+echo Kali
