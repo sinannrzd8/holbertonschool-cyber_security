@@ -17,12 +17,6 @@ stop() {
     echo "manage_my_process stopped"
 }
 
-restart() {
-    stop
-    start
-    echo "manage_my_process restarted"
-}
-
 case "$1" in
     start)
         start
@@ -31,7 +25,9 @@ case "$1" in
         stop
         ;;
     restart)
-        restart
+        stop > /dev/null 2>&1
+        start > /dev/null 2>&1
+        echo "manage_my_process restarted"
         ;;
     *)
         echo "Usage: manage_my_process {start|stop|restart}"
