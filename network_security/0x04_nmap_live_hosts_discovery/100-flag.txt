@@ -1,2 +1,1 @@
-#!/bin/bash
-sudo nmap -sU -sV -p200-300 $1
+5b6ee9f4da843c2dc78a4eb610b86296
